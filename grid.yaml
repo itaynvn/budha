@@ -1,0 +1,22 @@
+parameters:
+    # Float parameter is a range of possible values between a minimum (inclusive)
+    # and maximum (not inclusive) values.
+    #
+    - param_name: "learning_rate"
+      type: "float" # precision is 9 after period
+      min: 0.00001
+      max: 0.1
+      scale: "log2" # Could be log10 as well
+      steps: 2
+
+    # Discrete parameter is an array of numerical values.
+    #
+    - param_name: "c"
+      type: "discrete"
+      values: [0, 0.1 ,0.001]
+
+    # Categorical parameter is an array of string values
+    #
+    - param_name: "kernel"
+      type: "categorical"
+      values: ["linear", "rbf"]
